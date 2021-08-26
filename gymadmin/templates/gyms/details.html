@@ -1,0 +1,30 @@
+{% extends "gymadmin_base.html" %}
+
+{% block gymadmin_body_content %}
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+<h3 class="h3 mb-0 text-gray-800">Gyms | {{user}}</h3>
+</div>
+
+<table class="table table-hover">
+	<tbody>
+		<tr>
+		 <th scope="row">Name</th>
+			<td>{{gym.name}}</td>
+		</tr>
+		<tr>
+		 <th scope="row">Location</th>
+			<td>{{gym.location}}</td>
+		</tr>
+		<tr>
+		 <th scope="row">pricw</th>
+			<td>{{gym.price}}</td>
+		</tr>
+		<tr>
+		 <th scope="row">summary</th>
+			<td>{{gym.summary}}</td>
+		</tr>
+	</tbody>
+</table>
+
+
+{% endblock %}

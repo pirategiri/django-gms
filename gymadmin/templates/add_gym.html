@@ -1,0 +1,42 @@
+{% extends "gymadmin_base.html" %}
+
+{% block gymadmin_body_content %}
+       <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h3 class="h3 mb-0 text-gray-800">Add Gym</h3>
+          </div>
+
+      <form action="/gymadmin/gyms/CreateGym/" method="POST"/>
+        {% csrf_token %}
+       <div class="form-group">
+        	<label for="id_name">Name:</label> 
+        	<input type="text"  name="name" class="form-control" maxlength="200" required id="id_name"></li>
+        </div>
+        <div class="form-group">
+        		<label for="id_location">Location:</label> <input type="text" class="form-control"  name="location" maxlength="200" required id="id_location">
+        </div>
+        	<div class="form-group">
+        		<label for="id_price">average cost:</label> <input type="number" class="form-control" value="{{gym.price}}"name="price" required id="id_price">
+            </div>
+        		
+            <div class="form-group">
+        			<label for="id_rating">Rating:</label> <input type="number" class="form-control" value="{{gym.rating}}" name="rating" required id="id_rating">
+            </div>
+        			
+            <div class="form-group">
+                    <label for="id_summary">Summary:</label> <textarea name="summary" class="form-control" cols="40" rows="10" required id="id_summary">{{gym.summary}}</textarea>
+            </div>
+
+        	<div class="form-group">
+        		<label for="id_featured_photos">Featured photos:</label>
+        		 <input type="file" name="featured_photos"  class="form-control-file"  value="{{gym.featured_photos}}" accept="image/*" id="id_featured_photos">
+             </div>
+        			
+            <div class="form-group">
+            	<label for="id_user">User:</label> <input type="number" value="{{gym.user.id}}"name="user" required id="id_user">
+        	</div>
+        <input type="submit" name="submit" class="btn btn-primary" value="submit">
+      </form>
+
+      
+
+{% endblock %}

@@ -1,0 +1,16 @@
+Things done during the project:
+
+templating part:
+.downloaded a bootstrap template
+Integrating the template in project
+.created a template folder 
+.inside the template folder we created a new file called 'base.html'
+
+.inside base.html we copied the index file of the template and extended the base.html in our app template.
+.joined the directory in the settings of project in order to read the base.html file
+.to load the css and js of the bootstrap template, we created a new folder called static and copied all the css and js file from dowloaded template to our app
+
+.paths were specified in the base.html file for css and js
+
+the base.html was edited and a folder called widets was created in order to minimize the code.
+.in wodgets folder components like navbar,sidebar were created by pasting the necessary code from the base file
